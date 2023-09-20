@@ -3,7 +3,7 @@
 :root {
   --white-color: #fff;
   --black-color: #333;
-  --primary-color: #ffa25a;
+  --primary-color: #ce9061;
 }
 
 body {
@@ -31,13 +31,20 @@ body {
   padding: 10px 20px;
 }
 .nav {
-  display: flex;
-  justify-content: flex-end;
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  z-index: 100;
 }
 .nav-list {
   display: flex;
   justify-content: space-between;
   gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .nav-list {
+    gap: 56px;
+  }
 }
 .nav-item {
   font-family: "Yomogi", cursive;
@@ -46,6 +53,7 @@ body {
   text-shadow: 2px 2px 10px var(--black-color);
 }
 .nav-item:hover {
+  transition: 0.3s;
   color: var(--primary-color);
 }
 
@@ -54,13 +62,13 @@ body {
   font-size: 32px;
   font-weight: bold;
   text-shadow: 2px 2px 10px var(--black-color);
-  padding-left: 40px;
+  padding-left: 20%;
 }
 .header-ttl_sub {
   margin-top: 30px;
   font-weight: bold;
   text-shadow: 2px 2px 10px var(--black-color);
-  padding-left: 30px;
+  padding-left: calc(20% + 30px);
 }
 @media screen and (min-width: 768px) {
   .header-ttl {
@@ -72,7 +80,7 @@ body {
 .conts {
   width: 90%;
   padding: 10px 20px 30px 20px;
-  margin-top: 50px;
+  margin-top: 56px;
   margin-right: auto;
   margin-left: auto;
   background-color: rgba(51, 51, 51, 0.5);
@@ -80,18 +88,21 @@ body {
 }
 .cont-ttl {
   font-size: 32px;
+  font-weight: bold;
   text-align: center;
 }
 .cont-txt {
   padding-top: 30px;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .conts {
-    width: 80%;
+    width: 60%;
     padding: 20px 30px 40px 30px;
+    margin-top: 80px;
   }
   .cont-ttl {
-    font-size: 40px;
+    font-size: 48px;
   }
 }
 
@@ -104,16 +115,16 @@ body {
   gap: 20px;
 }
 .cont-item img {
-  width: 120px;
+  width: 30%;
   border-radius: 20px;
   box-shadow: inset 0 0 10px var(--black-color);
 }
 .cont-item img:hover {
-  transition: 0.5s;
   transform: scale(1.1);
+  transition: transform ease-in-out 0.5s;
 }
 .cont-item p {
-  width: 200px;
+  width: 30%;
 }
 @media screen and (min-width: 768px) {
   .cont-items {
@@ -122,12 +133,6 @@ body {
   .cont-item {
     margin-top: 40px;
     gap: 40px;
-  }
-  .cont-item img {
-    width: 240px;
-  }
-  .cont-item p {
-    width: 400px;
   }
 }
 
@@ -146,6 +151,7 @@ body {
   transition: 0.3s;
   color: var(--primary-color);
   border-bottom: 1px solid var(--primary-color);
+  transition: 0.3s;
 }
 
 .news-btn {
@@ -158,6 +164,7 @@ body {
   text-shadow: 2px 2px 10px var(--black-color);
 }
 .news-btn:hover {
+  transition: 0.3s;
   color: var(--primary-color);
 }
 
@@ -192,7 +199,7 @@ body {
 
 /* footer */
 footer {
-  padding: 10px 0;
+  padding: 80px 0 10px 0;
   font-size: 12px;
   text-align: center;
 }
